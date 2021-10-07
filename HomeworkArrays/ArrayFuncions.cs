@@ -517,31 +517,29 @@ namespace HomeworkArrays
             {
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    int sumOfNeighbours = 0;
 
-                    if (j + 1 != array.GetLength(1))
+                    if (j + 1 != array.GetLength(1) && array[i, j + 1] > array[i, j])
                     {
-                        sumOfNeighbours += array[i, j + 1];
+                        break;
                     }
-                    if (j - 1 >= 0)
+                    if (j - 1 >= 0 && array[i, j - 1] > array[i,j])
                     {
-                        sumOfNeighbours += array[i, j - 1];
+                        break;
                     }
-                    if (i + 1 != array.GetLength(0))
+                    if (i + 1 != array.GetLength(0) && array[i + 1, j] > array[i,j])
                     {
-                        sumOfNeighbours += array[i + 1, j];
+                        break;
                     }
-                    if (i - 1 >= 0)
+                    if (i - 1 >= 0 && array[i - 1, j] > array[i,j])
                     {
-                        sumOfNeighbours += array[i - 1, j];
+                        break;
                     }
-                    if (array[i, j] > sumOfNeighbours)
-                    {
-                        countElementsGreaterNeighbours++;
 
-                        //for debug
-                        Console.WriteLine($"value: {array[i, j]} index: ({i},{j}) sumOfNeighbours: {sumOfNeighbours}");
-                    }
+                    countElementsGreaterNeighbours++;
+
+                    //for debug
+                    Console.WriteLine($"value: {array[i, j]} index: ({i},{j})");
+
 
                 }
             }
