@@ -520,19 +520,19 @@ namespace HomeworkArrays
 
                     if (j + 1 != array.GetLength(1) && array[i, j + 1] > array[i, j])
                     {
-                        break;
+                        continue;
                     }
                     if (j - 1 >= 0 && array[i, j - 1] > array[i,j])
                     {
-                        break;
+                        continue;
                     }
                     if (i + 1 != array.GetLength(0) && array[i + 1, j] > array[i,j])
                     {
-                        break;
+                        continue;
                     }
                     if (i - 1 >= 0 && array[i - 1, j] > array[i,j])
                     {
-                        break;
+                        continue;
                     }
 
                     countElementsGreaterNeighbours++;
