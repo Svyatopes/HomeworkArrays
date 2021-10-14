@@ -518,19 +518,19 @@ namespace HomeworkArrays
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
 
-                    if (j + 1 != array.GetLength(1) && array[i, j + 1] > array[i, j])
+                    if (j + 1 != array.GetLength(1) && array[i, j + 1] >= array[i, j])
                     {
                         continue;
                     }
-                    if (j - 1 >= 0 && array[i, j - 1] > array[i,j])
+                    if (j - 1 >= 0 && array[i, j - 1] >= array[i,j])
                     {
                         continue;
                     }
-                    if (i + 1 != array.GetLength(0) && array[i + 1, j] > array[i,j])
+                    if (i + 1 != array.GetLength(0) && array[i + 1, j] >= array[i,j])
                     {
                         continue;
                     }
-                    if (i - 1 >= 0 && array[i - 1, j] > array[i,j])
+                    if (i - 1 >= 0 && array[i - 1, j] >= array[i,j])
                     {
                         continue;
                     }
